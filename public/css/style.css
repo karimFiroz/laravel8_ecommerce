@@ -1,0 +1,15 @@
+
+
+/**
+*overfide CSS's
+*/
+
+.bg-light {
+    background-color: #02aadd!important;
+}
+.margin-top-20{margin-top:20px;}
+footer{
+    background-color: #02aadd;
+    padding:20px;
+    margin-top:20px;
+}
