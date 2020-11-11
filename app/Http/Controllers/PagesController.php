@@ -11,11 +11,31 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    
     public function index()
     {
-        //
+        return view('index');
     }
-
+    
+    
+  public function welcome()
+    {
+        return view('pages.welcome');
+    }
+    
+    
+    
+     public function all_products()
+    {
+        return view('pages.all_products');
+    }
+    
+    
+    
+    
+    
+    
     /**
      * Show the form for creating a new resource.
      *
