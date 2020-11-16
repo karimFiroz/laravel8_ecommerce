@@ -20,8 +20,7 @@
                 <a href="#" class="btn btn-outline-warning">Add to card</a>
               </div>
           </div>
-                  
-                  </div>
+        </div>
                   
                 
                   

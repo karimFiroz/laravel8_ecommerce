@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-//use App\Product;
+use App\models\Product;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -16,19 +16,18 @@ class PagesController extends Controller
     
      public function index()
     {
-        return view('index');
+        return view('pages.home');
     }
     
     
     
     
     
-      public function products()
-    {
-
-          return view('pages.products.index');
-    }
-    
+  public function products()
+  {
+    $products=Product::orderBy('id','desc')->get();
+    return view('pages.products.index')->with('products',$products);
+     }
     
     
     

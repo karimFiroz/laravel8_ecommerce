@@ -12,16 +12,46 @@ use App\Http\Controllers\PagesController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::view('/welcome', 'welcome');
+
+Route::get('foo', function () {
+    return 'Hello World';
 });
+Route::redirect('/here', '/there', 301);
+
+
+Route::get('user/{id}', function ($id) {
+    return 'User '.$id;
+});
+************************************************************/
+
+
+/***Cycle:browser->route->view***/
+
+Route::get('/karim', function () {
+    return  'Md. Abdul Karim Firoz';
+});
+ 
+/***Cycle:Value pass: Send variable route->Page->view***/
+
+Route::view('/dashboard', 'dashboard',['name'=>'Md.karim Sarkar']);
+
+
+
+
+
+
+
+
+
+
 
 /***Cycle:browser->route->index method->PagesControllers'index method
 ->views' index->extends master ***/
 
 Route::get('/', [PagesController::class, 'index'])->name('index');
+    
 
 /***Cycle:browser->route->product method->PagesControllers'product method
 ->pages->products->index***/
