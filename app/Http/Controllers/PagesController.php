@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\models\Product;
+use App\models\ProductImage;
+
 use Illuminate\Http\Request;
 
 class PagesController extends Controller

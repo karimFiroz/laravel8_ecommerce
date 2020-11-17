@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 @section('content')
  @include('partials.product-sidebar') 
@@ -7,25 +8,27 @@
               
               <div class="row">
               
-                
-                  
-          @foreach($products as $product)        
-    
+     @foreach($products as $product)
 
-					      <div class="col-md-3">
-                  
-                     <div class="card" >
-            <img class="card-img-top" src="{{asset('public/images/products/'.'1.png')}}" alt="Card image"height="200"width="100">
-              <div class="card-body">
-                <h4 class="card-title">Samsung</h4>
-                <p class="card-text">Price-5,000/-</p>
-                <a href="#" class="btn btn-outline-warning">Add to card</a>
-              </div>
-          </div>
-        </div>
+					<div class="col-md-3">
+						<div class="card">
+							
+		@foreach($product->images as $image)
+	<img class="card-img-top feacher-img" src="{{ asset('public/images/products/'. $image->image)  }}" alt="samsung galaxy">
+	
+							<div class="card-body">
+                                <h4 class="card-title">{{$product->title}}</h4>
+									    <p class="card-text">TK-{{$product->price}}</p>
+									    <a href="#" class="btn btn-outline-success">See Profile</a>
+							</div>
+						</div>
+					</div>
+
+
 
 	
-               @endforeach   
+              @endforeach   
+              @endforeach   
                   
                   
                   
