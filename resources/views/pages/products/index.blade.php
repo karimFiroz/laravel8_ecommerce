@@ -12,10 +12,19 @@
 
 					<div class="col-md-3">
 						<div class="card">
-							
+							@php
+                            $i=1;
+                            @endphp
 		@foreach($product->images as $image)
-	<img class="card-img-top feacher-img" src="{{ asset('public/images/products/'. $image->image)  }}" alt="samsung galaxy">
+                            @if($i>0)
+                            <img class="card-img-top feacher-img" src="{{ asset('public/images/products/'. $image->image)  }}" alt="samsung galaxy">
+                            @endif
 	
+	               
+                            
+                            @php
+                            $i --;
+                            @endphp
 							<div class="card-body">
                                 <h4 class="card-title">{{$product->title}}</h4>
 									    <p class="card-text">TK-{{$product->price}}</p>

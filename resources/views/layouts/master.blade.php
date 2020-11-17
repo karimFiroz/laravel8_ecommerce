@@ -22,6 +22,7 @@
        
         <div class="content">
         <!-- navbar start -->
+@include('partials.call-to-action')
 @include('partials.navbar')
       <!-- navbar end -->
           </div>
@@ -53,11 +54,13 @@
       
       
       </div>
-       @include('partials.testimonials')
+       @include('partials.icon-grid')
+     
             
 <!--end of wrapper-->
-       @include('partials.icon-grid')
+      
   @include('partials.footer-col')
+        @include('partials.testimonials')
   @include('partials.footer')
 
 
