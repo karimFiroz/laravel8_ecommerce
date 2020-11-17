@@ -19,6 +19,7 @@
   <div class="wrapper">
   
  <!-- container start -->
+       
         <div class="content">
         <!-- navbar start -->
 @include('partials.navbar')
@@ -26,7 +27,7 @@
           </div>
           <!-- content end -->
 
-    
+   
       
       <div class="container margin-top-20">
       
@@ -52,9 +53,11 @@
       
       
       </div>
-             
+       @include('partials.testimonials')
+            
 <!--end of wrapper-->
- 
+       @include('partials.icon-grid')
+  @include('partials.footer-col')
   @include('partials.footer')
 
 

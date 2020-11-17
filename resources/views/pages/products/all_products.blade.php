@@ -1,11 +1,12 @@
 @extends('layouts.master')
 @section('content')
           
-          
+           @include('partials.product-sidebar')
           
           
               <h4 align="center">Feature Products</h4>
 <!--              mobile-->
+ <h4 align="center">Mobile</h4>
               <div class="widget">
               
               <div class="row">
@@ -75,10 +76,11 @@
                   
               </div>
                   
-                  <h4 align="center">Mobile</h4>
+                 
               
             
 <!--                     laptop       -->
+ <h4 align="center">Laptop</h4>
 
                <div class="widget">
 
@@ -152,12 +154,13 @@
                   
               
               </div>
-              <h4 align="center">Laptop</h4>
+             
               
 <!--              end of 2nd widget-->
               
               
 <!--                 tv-->
+ <h4 align="center">TV</h4>
               
                <div class="widget">
               
@@ -231,7 +234,7 @@
 <!--               end of 3rd widget    -->
                    
                    
-           <h4 align="center">TV</h4>
+          
               
               
               
